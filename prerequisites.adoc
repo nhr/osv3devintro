@@ -1,0 +1,16 @@
+# Prerequisites For Using OpenShift V3 as a User (Web Developer)
+
+For the first draft of this document we are going to focus getting this all going on Fedora 20/21 
+because that is the main OS for the doc author. In the future this will be expanded for Mac and Windows.
+
+## You need to install the following on your machine:
+
+1. VirtualBox - Here are the links to VirtualBox installations for Fedora, Mac, Windows, and Ubuntu
+2. Vagrant - Here is the link to the installer for all the same platforms as VirtualBox
+3. Ruby and Ruby Gems - here is the instructions to install this on Fedora
+
+Once those are all set you can move on to using Vagrant to spin up a VirtualBox image with everything
+you need already installed. By the end we will have OpenShift V3 running in a guest virtual machine and be
+able to connect to it from your host machine. We will be using the OpenShift command line tools to do all
+our work from our host machine
+
