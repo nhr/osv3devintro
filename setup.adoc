@@ -1,0 +1,5 @@
+# Setting up OpenShift V3 Using Vagrant and VirtualBox
+
+I assume you have already checked and installed all the prequisites[link to prequisites]
+
+1. 
