@@ -13,6 +13,12 @@ on Fedora 20 with the latest updates. I would love github issues or pull request
 1. https://docs.docker.com/installation/fedora/[Install Docker] - Not only are you going to use Docker images to 
 deploy your application but we are going to run OpenShift in Docker (I think that is nifty)
 
+*I used* 
+
+  $ docker --version
+  Docker version 1.4.1, build 5bc2ff8/1.4.1
+  
+
 2. To get OpenShift to be able to deploy domain names and see them on our host machine we need a way to handle DNS 
 without adding a DNS server. So we also need to set up *dnsmasq*
 
