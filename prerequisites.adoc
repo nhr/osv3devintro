@@ -3,11 +3,24 @@
 For the first draft of this document we are going to focus getting this all going on Fedora 20/21 
 because that is the main OS for the doc author. In the future this will be expanded for Mac and Windows.
 
+Please be aware that we are going to make some modifications that might have security and networking changes. 
+We do not recommend this tutorial for people who are inexperienced with Linux systems or afraid to get their
+hands a little dirty. I did all of these steps to my own work machine and so they have been tested 
+on Fedora 20 with the latest updates. I would love github issues or pull requests for any errors you experience.
+
 ## You need to install the following on your machine:
 
-1. VirtualBox - Here are the links to VirtualBox installations for Fedora, Mac, Windows, and Ubuntu
-2. Vagrant - Here is the link to the installer for all the same platforms as VirtualBox
-3. Ruby and Ruby Gems - here is the instructions to install this on Fedora
+1. https://docs.docker.com/installation/fedora/[Install Docker] - Not only are you going to use Docker images to 
+deploy your application but we are going to run OpenShift in Docker (I think that is nifty)
+
+2. To get OpenShift to be able to deploy domain names and see them on our host machine we need a way to handle DNS 
+without adding a DNS server. So we also need to set up *dnsmasq*
+
+https://github.com/openshift/training/blob/master/beta-1-setup.md#appendix---dnsmasq-setup
+
+3. We are 
+
+
 
 Once those are all set you can move on to using Vagrant to spin up a VirtualBox image with everything
 you need already installed. By the end we will have OpenShift V3 running in a guest virtual machine and be
