@@ -13,23 +13,30 @@ on Fedora 20 with the latest updates. I would love github issues or pull request
 1. https://docs.docker.com/installation/fedora/[Install Docker] - Not only are you going to use Docker images to 
 deploy your application but we are going to run OpenShift in Docker (I think that is nifty)
 
-*I used* 
+**I used** 
 
   $ docker --version
   Docker version 1.4.1, build 5bc2ff8/1.4.1
   
 
+**Right now I am thinking all this is not needed and will revist**
 2. To get OpenShift to be able to deploy domain names and see them on our host machine we need a way to handle DNS 
-without adding a DNS server. So we also need to set up *dnsmasq*
+without adding a DNS server. So we also need to set up *dnsmasq*. Please note I have not set this up before and I am 
+assuming the same on your machine. If you have already changed your *dnsmasq* configuration then please proceed
+carefully.
 
 https://github.com/openshift/training/blob/master/beta-1-setup.md#appendix---dnsmasq-setup
 
+Before you click that link:
+
+  a. I chose to just add the contents of the **dnsmasq.conf** in the repository to the top of my current
+  **dnsmasq.conf**
+
+  b. For me adding the contents to my **/etc/hosts** was the same as just appending the last 3 lines of the file
+  the repo to the end of my current **/etc/hosts**
+  
 3. We are 
 
+**--------------------------**
 
-
-Once those are all set you can move on to using Vagrant to spin up a VirtualBox image with everything
-you need already installed. By the end we will have OpenShift V3 running in a guest virtual machine and be
-able to connect to it from your host machine. We will be using the OpenShift command line tools to do all
-our work from our host machine
 
