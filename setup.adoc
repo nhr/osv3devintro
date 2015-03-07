@@ -1,5 +1,22 @@
 # Setting up OpenShift V3 Using Vagrant and VirtualBox
 
-I assume you have already checked and installed all the prequisites[link to prequisites]
+I assume you have already checked and installed all the prequisites[link to prequisites]. You will need to be 
+connected to the internet to do all of the setup steps. Once you get the Docker images installed and the docker 
+registry running locally you can actually use this configuration without internet connectivity. For now make sure 
+you have an internet connection, the faster the better. 
 
-1. 
+We are going to do a couple of Docker commands to spin up OpenShift. First we need to spin up the master and the
+hosts in docker
+
+1. Make sure you have started Docker in daemon mode
+
+  $ sudo systemctl start docker
+  
+2. This next command actually spins up a container with the entire OpenShift software platform. It is going to download some 
+Docker images so it may take a while. In the dockerfile for this image it contains port mappings for 8080 and 8443. These are
+the ports you are going to use to talk to the _OpenShift Master_. 
+
+  $ docker run -d --name "openshift-origin" --net=host --privileged -v /var/run/docker.sock:/var/run/docker.sock -v /tmp/openshift:/tmp/openshift openshift/origin start
+  
+3. To test that this is running we are going to curl (make an http request) to both ports and make sure we get an expected response.
+
